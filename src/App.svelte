@@ -1,16 +1,16 @@
 <script lang=ts>
 
     let items = [
-        { i: 1, text: 'chips', amt: 283, cal: 5 },
-        { i: 2, text: 'crunch bar', amt: 4, cal: 160 },
-        { i: 3, text: 'donuts', amt: 2, cal: 300 }
+        { text: 'chips', amt: 283, cal: 5 },
+        { text: 'crunch bar', amt: 4, cal: 160 },
+        { text: 'donuts', amt: 2, cal: 300 }
 	];
 
 	function add() {
-		items = items.concat({ i: 4, text: '', amt: 1, cal: 4 });
+		items = items.concat({ text: '', amt: 1, cal: 4 });
 	}
 
-	const remove = (item: { i: number; text: string; amt: number; cal: number; }) => {
+	const remove = (item: { text: string; amt: number; cal: number; }) => {
         items = items.filter(i => i !== item)
 	};
 

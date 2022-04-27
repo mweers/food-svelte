@@ -1,5 +1,4 @@
 <script lang=ts>
-import { text } from "svelte/internal";
 
     let items = [
         { i: 1, text: 'chips', amt: 283, cal: 5 },

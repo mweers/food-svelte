@@ -1,5 +1,7 @@
 <script lang=ts>
 
+let weight = 135;
+let steps = 30000;
     let items = [
         { text: 'chips', amt: 283, cal: 5 },
         { text: 'crunch bar', amt: 4, cal: 160 },
@@ -19,7 +21,8 @@
 
 	// $: amtSum = list.reduce((acc, list) => acc + list.amt,0)
 	// $: calSum = list.reduce((acc, list) => acc + list.cal,0)
-	$: total = items.reduce((acc, list) => acc + list.cal*list.amt,0)
+	$: foodtotal = items.reduce((acc, list) => acc + list.cal*list.amt,0)
+	//$: tool = foodtotal - weight * 
 
 </script>
 
@@ -34,9 +37,15 @@
 	</div>
 {/each}
 
+weight
+<input bind:value={weight}>
+<br>
+steps
+<input bind:value={steps}>
+
 <!-- <p>{amtSum}</p>
 <p>{calSum}</p> -->
-<p>{total}</p>
+<p>{foodtotal}</p>
 
 <button on:click={add}>
 	Add item
